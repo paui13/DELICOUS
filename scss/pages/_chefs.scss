@@ -1,0 +1,35 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.chefs{
+    padding: 1rem ;
+    &__wrapper{
+        @include grid(4, 5rem);
+        @include mediaQuery(580px){
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &__title{
+        font-size: 5rem;
+
+    }
+    .chefs{
+        &__details{
+         img{
+            border-radius: 2rem;
+         }
+            
+        }
+    }
+    &__text{
+        p{
+            color: $clr-secondary;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    }

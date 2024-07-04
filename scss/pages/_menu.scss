@@ -1,0 +1,45 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+//  menu
+.menu {
+    &__title {
+      @include centerAll;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+    &__wrapper {
+      @include grid(2, 1rem);
+      margin-top: 5rem;
+      @include mediaQuery(520px){
+        grid-template-columns: 1fr;
+        
+      }
+      justify-items: center;
+    }
+
+    br{
+      display: none
+    }
+    &__content {
+      ul {
+        @include between;
+        li {
+          color: $clr-secondary;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+      p {
+        margin-bottom: 2rem;
+      }
+      
+    }
+    .menu_img img {
+        border-radius: 5rem;
+        max-width: 70rem;
+        margin-left: 11rem;
+    
+       }
+      }
+  

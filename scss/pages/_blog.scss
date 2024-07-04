@@ -1,0 +1,38 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.bloggers {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    &__wrapper {
+        display: flex;
+        @include centerAll;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__group {
+        text-align: justify;
+        padding: 2rem;
+        img {
+            width: 100%;
+            max-width: 50rem;
+            border-radius: 2rem;
+        }
+        &--text {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-top: 2rem;
+            p {
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            a {
+                width: fit-content;
+            }
+        }
+    }
+}

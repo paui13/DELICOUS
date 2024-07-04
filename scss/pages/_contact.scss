@@ -1,0 +1,131 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contact {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
+    &__wrapper {
+        @include centerAll;
+        flex-direction: column;
+    }
+
+    &__icons {
+        display: flex;
+        padding-bottom: 2rem;
+        gap: 5rem;
+
+        @include mediaQuery(520px) {
+            gap: 2rem;
+            flex-direction: column;
+        }
+
+      
+
+            li {
+                font-size: 1.7rem;
+
+                &:nth-child(2) {
+                    font-size: 1.2rem;
+                }
+                ul {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    display: flex;
+                   
+                   
+            }
+        }
+    }
+
+    &__map {
+        iframe {
+            width: 50rem;
+            border-radius: 2rem;
+
+            @include mediaQuery(520px) {
+                width: unset;
+            }
+        }
+    }
+
+    &__form {
+        @include centerAll;
+        flex-direction: column;
+
+        &--title {
+            h3 {
+                font-size: 1.7rem;
+            }
+        }
+
+        &--btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        &--form {
+            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            @include mediaQuery(520px) {
+                max-width: 20rem;
+            }
+
+            textarea {
+                @extend input;
+                height: 8rem;
+            }
+        }
+    }
+
+    input {
+        border: solid 1px $clr-light;
+        background-color: transparent;
+        border-radius: 0.7rem;
+        width: 58rem;
+        height: 2.5rem;
+        padding: 0.5rem 1rem;
+
+        @include mediaQuery(520px) {
+            width: 20rem;
+        }
+
+        &:enabled {
+            color: $clr-light;
+        }
+    }
+
+    .form__name {
+        display: flex;
+        justify-content: space-between;
+
+        @include mediaQuery(520px) {
+            flex-direction: column;
+        }
+
+        input {
+            width: 24rem;
+
+            @include mediaQuery(520px) {
+                width: 20rem;
+            }
+        }
+    }
+
+    .form__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            max-width: 100%;
+        }
+    }
+}
